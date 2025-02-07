@@ -6,8 +6,8 @@ from msrest.authentication import CognitiveServicesCredentials
 from PIL import Image, ImageDraw, ImageFont
 
 # APIキーとエンドポイントを環境変数から取得
-subscription_key = os.getenv("AZURE_SUBSCRIPTION_KEY")  # 環境変数にAPIキーを設定
-endpoint = os.getenv("AZURE_ENDPOINT")  # 環境変数にエンドポイントを設定
+subscription_key = "FsRxa7VqCB8vvKsd8F9wHuocRt3uSGl2mD9BUSEoBU0ipyxWnrrqJQQJ99BBACi0881XJ3w3AAAFACOGyMbo"
+endpoint = "https://20250203.cognitiveservices.azure.com/"
 
 computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
@@ -77,7 +77,7 @@ if uploaded_file is not None:
         draw.rectangle([(x, y), (x + text_w, y + text_h)], fill='green')
         draw.text((x, y), caption, fill='white', font=font)
     
-    st.image(img, caption="Processed Image", use_column_width=True)
+    st.image(img, caption="Processed Image", use_container_width=True)
 
     # 画像タグの取得
     tags_name = get_tags("uploaded_image.jpg")
