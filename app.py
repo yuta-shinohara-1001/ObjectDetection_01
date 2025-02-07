@@ -6,8 +6,8 @@ from msrest.authentication import CognitiveServicesCredentials
 from PIL import Image, ImageDraw, ImageFont
 
 # APIキーとエンドポイントを環境変数から取得
-subscription_key = "FsRxa7VqCB8vvKsd8F9wHuocRt3uSGl2mD9BUSEoBU0ipyxWnrrqJQQJ99BBACi0881XJ3w3AAAFACOGyMbo"
-endpoint = "https://20250203.cognitiveservices.azure.com/"
+subscription_key = ""
+endpoint = ""
 
 computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
